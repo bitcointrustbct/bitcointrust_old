@@ -1,0 +1,9 @@
+Building BitcoinTrust
+
+See doc/readme-qt.rst for instructions on building BitcoinTrust QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of BitcoinTrust.
+
+See doc/build-*.txt for instructions on building bitcointrustd,
+the intended-for-services, no-graphical-interface, reference
+implementation of BitcoinTrust.
