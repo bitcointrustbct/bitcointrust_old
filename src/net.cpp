@@ -1229,10 +1229,10 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"btc1.bitcointrust.global", "btc1.bitcointrust.global"},
-    {"btc2.bitcointrust.global", "btc2.bitcointrust.global"},
-    {"btc3.bitcointrust.global", "btc3.bitcointrust.global"},
-	{"btc4.bitcointrust.global", "btc4.bitcointrust.global"},
+    {"node1.bitcointrust.global", "node1.bitcointrust.global"},
+    {"node2.bitcointrust.global", "node2.bitcointrust.global"},
+    {"node3.bitcointrust.global", "node3.bitcointrust.global"},
+    {"node4.bitcointrust.global", "node4.bitcointrust.global"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
