@@ -42,7 +42,7 @@ static bool ipcScanCmd(int argc, char *argv[], bool fRelay)
     bool fSent = false;
     for (int i = 1; i < argc; i++)
     {
-        if (boost::algorithm::istarts_with(argv[i], "scolcoin:"))
+        if (boost::algorithm::istarts_with(argv[i], "bitcointrust:"))
         {
             const char *strURI = argv[i];
             try {
