@@ -75,7 +75,7 @@ void ipcScanRelay(int argc, char *argv[])
 static void ipcThread(void* pArg)
 {
     // Make this thread recognisable as the GUI-IPC thread
-    RenameThread("scolcoin-gui-ipc");
+    RenameThread("bitcointrust-gui-ipc");
 	
     try
     {
