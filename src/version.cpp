@@ -62,5 +62,5 @@ const std::string CLIENT_NAME("BitcoinTrust");
 #    endif
 #endif
 
-const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
+const std::string CLIENT_BUILD(CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
