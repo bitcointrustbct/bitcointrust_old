@@ -305,11 +305,11 @@ void RPCConsole::clear()
     // Set default style sheet
     ui->messagesWidget->document()->setDefaultStyleSheet(
                 "table { }"
-                "td.time { color: #808080; padding-top: 3px; } "
+                "td.time { color: #685D4E; padding-top: 3px; } "
                 "td.message { font-family: Monospace; font-size: 12px; } "
-                "td.cmd-request { color: #006060; } "
+                "td.cmd-request { color: #817252; } "
                 "td.cmd-error { color: red; } "
-                "b { color: #006060; } "
+                "b { color: #817252; } "
                 );
 
     message(CMD_REPLY, (tr("Welcome to the BitcoinTrust RPC console.") + "<br>" +
