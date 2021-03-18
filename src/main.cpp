@@ -1022,9 +1022,33 @@ int64_t GetProofOfStakeRewardPercent(int nHeight)
 {
     int64_t nRewardCoinYear = COIN_YEAR_REWARD_V1;
 
-    if (nHeight >= 2000000)
+    if (nHeight > 14000000) // ...........................Block  14.000.000 - 0.0015% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V13;
+    else if (nHeight >= 12000001 && nHeight <= 13999999) // Block 13.000.000 - 0.0015% POS	    
+        nRewardCoinYear = COIN_YEAR_REWARD_V12;	
+    else if (nHeight >= 11000001 && nHeight <= 12000000) // Block 12.000.000 - 0.0029% POS	    
+        nRewardCoinYear = COIN_YEAR_REWARD_V11;	
+    else if (nHeight >= 10000001 && nHeight <= 11000000) // Block 11.000.000 - 0.0058% POS	    
+        nRewardCoinYear = COIN_YEAR_REWARD_V10;	
+    else if (nHeight >= 9000001 && nHeight <= 10000000) // Block 10.000.000 - 0.0117% POS	    
+        nRewardCoinYear = COIN_YEAR_REWARD_V10;	
+    else if (nHeight >= 8000001 && nHeight <= 9000000) // Block 9.000.000 - 0.0234% POS	    
+        nRewardCoinYear = COIN_YEAR_REWARD_V9;    
+    else if (nHeight >= 7000001 && nHeight <= 8000000) // Block 8.000.000 - 0.0468% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V8;    
+    else if (nHeight >= 6000001 && nHeight <= 7000000) // Block 7.000.000 0.0937% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V7;    
+    else if (nHeight >= 5000001 && nHeight <= 6000000) // Block 6.000.000 0.1875% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V6;    
+    else if (nHeight >= 4000001 && nHeight <= 5000000) // Block 5.000.000 0.375% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V5;
+    else if (nHeight >= 3000001 && nHeight <= 4000000) // Block 4.000.000 0.75% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V4;
+    else if (nHeight >= 2000001 && nHeight <= 3000000) // Block 3.000.000 1.5% POS
+        nRewardCoinYear = COIN_YEAR_REWARD_V3;       
+    else if (nHeight >= 1000000 && nHeight <= 2000000) // Block 2.000.000 3% POS
         nRewardCoinYear = COIN_YEAR_REWARD_V2;
-    else if (nHeight < 2000000)
+    else if (nHeight < 1000000) //....................... Block   1.000.000 10% POS
         nRewardCoinYear = COIN_YEAR_REWARD_V1;
 
     return nRewardCoinYear;
