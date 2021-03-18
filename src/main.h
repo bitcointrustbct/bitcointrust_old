@@ -53,8 +53,20 @@ inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MO
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 int64_t GetProofOfStakeRewardPercent(int nHeight);
 
-static const int64_t COIN_YEAR_REWARD_V1 = 10 * CENT;
-static const int64_t COIN_YEAR_REWARD_V2 = 3 * CENT;
+static const int64_t COIN_YEAR_REWARD_V1 = 10 * CENT;     //  10% -        1.000.000 block
+static const int64_t COIN_YEAR_REWARD_V2 = 3 * CENT;      //  3% -         2.000.000 block
+static const int64_t COIN_YEAR_REWARD_V3 = 1.5 * CENT;    //  1.5% -       3.000.000 block
+static const int64_t COIN_YEAR_REWARD_V4 = 0.75 * CENT;   //  0.75% -      4.000.000 block
+static const int64_t COIN_YEAR_REWARD_V5 = 0.375 * CENT;  //  0.375% -     5.000.000 block
+static const int64_t COIN_YEAR_REWARD_V6 = 0.1875 * CENT; //  0.1875% -    6.000.000 block
+static const int64_t COIN_YEAR_REWARD_V7 = 0.09375 * CENT;//  0.09375% -   7.000.000 block
+static const int64_t COIN_YEAR_REWARD_V8 = 0.046875 * CENT;// 0.046875% -  8.000.000 block
+static const int64_t COIN_YEAR_REWARD_V9 = 0.0234375 * CENT;//0.0234375% - 9.000.000 block
+static const int64_t COIN_YEAR_REWARD_V10 = 0.01171875 * CENT;//0.01171875% - 10.000.000 block
+static const int64_t COIN_YEAR_REWARD_V11 = 0.00585938 * CENT;//0.00585938% - 11.000.000 block
+static const int64_t COIN_YEAR_REWARD_V12 = 0.00292969 * CENT;//0.00292969% - 12.000.000 block
+static const int64_t COIN_YEAR_REWARD_V13 = 0.00146484 * CENT;//0.00146484% - 13.000.000 block
+static const int64_t COIN_YEAR_REWARD_V14 = 0.00146484 * CENT;//0.00146484% - 14.000.000 block
 
 static const uint256 hashGenesisBlock("0x00000bee18888d3bfe358f523fff7891c8adc5ca85fe371f9b7115253589659c");
 static const uint256 hashGenesisBlockTestNet("0x00000bee18888d3bfe358f523fff7891c8adc5ca85fe371f9b7115253589659c");
