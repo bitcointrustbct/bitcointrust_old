@@ -69,7 +69,7 @@ static const int64_t COIN_YEAR_REWARD_V13 = 0.00146484 * CENT;//0.00146484% - 13
 static const int64_t COIN_YEAR_REWARD_V14 = 0.00146484 * CENT;//0.00146484% - 14.000.000 block
 
 static const uint256 hashGenesisBlock("0x00000bee18888d3bfe358f523fff7891c8adc5ca85fe371f9b7115253589659c");
-static const uint256 hashGenesisBlockTestNet("0x00000bee18888d3bfe358f523fff7891c8adc5ca85fe371f9b7115253589659c");
+static const uint256 hashGenesisBlockTestNet("0x000035de35b03d061d44239baf17bc683d4fba3fa69fcc6874c8943cdd4334b1");
 
 inline int64_t PastDrift(int64_t nTime)   { return nTime - 10 * 60; } // up to 10 minutes from the past
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 10 * 60; } // up to 10 minutes from the future
