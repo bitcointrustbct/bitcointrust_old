@@ -2574,8 +2574,7 @@ bool LoadBlockIndex(bool fAllowNew)
         //  block.hashMerkleRoot == 45094f531c5d83cf855e15e9b535778180fc06d08b1bde117acda73c05d0d54e
         //  block.nTime = 1598632834
         //  block.nNonce = 5169494
-
-
+	    
         const char* pszTimestamp = "1598473537 Bitcoin Trust Network Igualdad, Libertad, Justicia y Dignidad";
         CTransaction txNew;
         txNew.nTime = 1598632834;
@@ -2593,7 +2592,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nNonce   = !fTestNet ? 5169494 : 5169494; 
         
 
-        if (true  && (block.GetHash() != hashGenesisBlock)) {
+        if (false  && (block.GetHash() != hashGenesisBlock)) {
 
                 // This will figure out a valid hash and Nonce if you're
                 // creating a different genesis block:
