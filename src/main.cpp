@@ -2535,6 +2535,7 @@ bool LoadBlockIndex(bool fAllowNew)
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
         nStakeMinAge = 1 * 60 * 60; // test net min age is 1 hour
         nCoinbaseMaturity = 10; // test maturity is 10 blocks
+	hashGenesisBlock = uint256("000035de35b03d061d44239baf17bc683d4fba3fa69fcc6874c8943cdd4334b1");    
     }
     else
     {
