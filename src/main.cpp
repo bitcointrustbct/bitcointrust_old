@@ -2575,6 +2575,17 @@ bool LoadBlockIndex(bool fAllowNew)
         //  block.nTime = 1598632834
         //  block.nNonce = 5169494
 	    
+	// Genesis TestNet
+	// CBlock(hash=000035de35b03d061d44239baf17bc683d4fba3fa69fcc6874c8943cdd4334b1, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, ha$
+  	// Coinbase(hash=45094f531c, nTime=1598632834, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+    	// CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a483135393834373335333720426974636f696e205472757374204e6574776f726b20496775616c6461642c204c696265727461642c2$
+   	// CTxOut(empty)
+ 	// vMerkleTree: 45094f531c
+	// block.GetHash() == 000035de35b03d061d44239baf17bc683d4fba3fa69fcc6874c8943cdd4334b1
+	// block.hashMerkleRoot == 45094f531c5d83cf855e15e9b535778180fc06d08b1bde117acda73c05d0d54e
+	// block.nTime = 1598632834
+	// block.nNonce = 5297556    
+	    
         const char* pszTimestamp = "1598473537 Bitcoin Trust Network Igualdad, Libertad, Justicia y Dignidad";
         CTransaction txNew;
         txNew.nTime = 1598632834;
@@ -2589,7 +2600,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1598632834;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = !fTestNet ? 5169494 : 5169494; 
+        block.nNonce   = !fTestNet ? 5169494 : 5297556; 
         
 
         if (false  && (block.GetHash() != hashGenesisBlock)) {
