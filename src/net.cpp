@@ -1242,6 +1242,11 @@ static const char *strDNSSeed[][2] = {
     {"node4.bitcointrust.info", "node4.bitcointrust.info"},
 };
 
+static const char *strTestNetDNSSeed[][2] = {
+    {"testnet1.bitcointrust.global", "testnet2.bitcointrust.global"},
+};
+
+
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
