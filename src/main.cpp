@@ -2530,7 +2530,7 @@ bool LoadBlockIndex(bool fAllowNew)
         pchMessageStart[1] = 0xa3;
         pchMessageStart[2] = 0xbc;
         pchMessageStart[3] = 0xa2;
-
+	hashGenesisBlock = uint256("72b54a91d8d403bf0e429d670cc99b16e709bcc6c547c50eae9886f1c47ee581");
         bnTrustedModulus.SetHex("f0d14cf72623dacfe738d0892b599be0f31052239cddd95a3f25101c801dc990453b38c9434efe3f372db39a32c2bb44cbaea72d62c8931fa785b0ec44531308df3e46069be5573e49bb29f4d479bfc3d162f57a5965db03810be7636da265bfced9c01a6b0296c77910ebdc8016f70174f0f18a57b3b971ac43a934c6aedbc5c866764a3622b5b7e3f9832b8b3f133c849dbcc0396588abcd1e41048555746e4823fb8aba5b3d23692c6857fccce733d6bb6ec1d5ea0afafecea14a0f6f798b6b27f77dc989c557795cc39a0940ef6bb29a7fc84135193a55bcfc2f01dd73efad1b69f45a55198bd0e6bef4d338e452f6a420f1ae2b1167b923f76633ab6e55");
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
         nStakeMinAge = 1 * 60 * 60; // test net min age is 1 hour
@@ -2577,7 +2577,15 @@ bool LoadBlockIndex(bool fAllowNew)
         //  block.nNonce = 5169494
 	    
 	// Genesis TestNet
-
+	// CBlock(hash=72b54a91d8d403bf0e429d670cc99b16e709bcc6c547c50eae9886f1c47ee581, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, ha$
+        // Coinbase(hash=45094f531c, nTime=1598632834, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+        // CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a483135393834373335333720426974636f696e205472757374204e6574776f726b20496775616c6461642c204c696265727461642c2$
+        // CTxOut(empty)
+        // vMerkleTree: 45094f531c
+        // block.GetHash() == 72b54a91d8d403bf0e429d670cc99b16e709bcc6c547c50eae9886f1c47ee581
+        // block.hashMerkleRoot == 45094f531c5d83cf855e15e9b535778180fc06d08b1bde117acda73c05d0d54e
+        // block.nTime = 1616186588
+        // block.nNonce = 5169494
 	    
         const char* pszTimestamp = "1598473537 Bitcoin Trust Network Igualdad, Libertad, Justicia y Dignidad";
         CTransaction txNew;
@@ -2616,7 +2624,7 @@ bool LoadBlockIndex(bool fAllowNew)
         {
             txNew.nTime = 1616186588;
 	    block.nTime    = 1616186588;
-            // block.nNonce   = 0;
+            block.nNonce   = 5169494;
         }
    
 	    
