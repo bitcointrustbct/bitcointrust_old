@@ -2601,7 +2601,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nTime    = 1598632834;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = !fTestNet ? 5169494 : 5297556; 
-        
+	              
 
         if (false  && (block.GetHash() != hashGenesisBlock)) {
 
@@ -2619,6 +2619,13 @@ bool LoadBlockIndex(bool fAllowNew)
                        }
         }
 
+	if (fTestNet)
+        {
+            block.nTime    = 1598632834;
+            block.nNonce   = 5297556;
+        }
+   
+	    
         //// debug print
         block.print();
         
