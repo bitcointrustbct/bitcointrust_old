@@ -1,0 +1,11 @@
+[Protocol]
+exec=bitcointrust-qt '%u'
+protocol=bitcointrust
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

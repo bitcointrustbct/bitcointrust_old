@@ -5,29 +5,29 @@
 #build/bitcoind::
 #	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_bitcoin)
 
-DEB_INSTALL_EXAMPLES_novacoind += debian/examples/*
-DEB_INSTALL_MANPAGES_novacoind += debian/manpages/*
+DEB_INSTALL_EXAMPLES_bitcointrustd += debian/examples/*
+DEB_INSTALL_MANPAGES_bitcointrustd += debian/manpages/*
 
 %:
 	dh --with bash-completion $@
 
 override_dh_auto_build:
-	cd src; $(MAKE) -f makefile.unix novacoind
+	cd src; $(MAKE) -f makefile.unix bitcointrustd
 	$(MAKE)
 
 override_dh_auto_clean:
-	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f novacoin-qt; fi
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f bitcointrust-qt; fi
 	cd src; $(MAKE) -f makefile.unix clean
 
 override_dh_auto_configure:
-	qmake novacoin-qt.pro USE_QRCODE=1
+	qmake bitcointrust-qt.pro USE_QRCODE=1
 
 override_dh_auto_test:
-	cd src; $(MAKE) -f makefile.unix test_novacoin
-	src/test_novacoin
+	cd src; $(MAKE) -f makefile.unix test_bitcointrust
+	src/test_bitcointrust
 
 # Ensure wrapper is set executable
-binary-post-install/novacoind:
-	chmod +x $(cdbs_curdestdir)usr/bin/novacoind
-binary-post-install/novacoin-qt:
-	chmod +x $(cdbs_curdestdir)usr/bin/novacoin-qt
+binary-post-install/bitcointrustd:
+	chmod +x $(cdbs_curdestdir)usr/bin/bitcointrustd
+binary-post-install/bitcointrust-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/bitcointrust-qt

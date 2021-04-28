@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitcoinTrust
+Comment=BitcoinTrust P2P Cryptocurrency
+Comment[fr]=BitcoinTrust, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BitcoinTrust, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/bitcointrust-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/bitcointrust;
+Categories=Office;

@@ -1,0 +1,2 @@
+debian/bin/bitcointrustd usr/bin
+src/bitcointrustd usr/lib/bitcointrust
