@@ -4,8 +4,8 @@ BitcoinTrust-qt: Qt5 GUI for BitcoinTrust
 Build instructions
 ===================
 
-Debian
--------
+Debian Jessie
+--------------
 
 First, make sure that the required packages for Qt5 development of your
 distribution are installed, for Debian and Ubuntu these are:
@@ -15,7 +15,7 @@ distribution are installed, for Debian and Ubuntu these are:
     apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
         build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb++-dev
+        libssl-dev libdb++-dev libminiupnpc-dev
 
 then execute the following:
 
@@ -27,6 +27,12 @@ then execute the following:
 Alternatively, install Qt Creator and open the `bitcointrust-qt.pro` file.
 
 An executable named `bitcointrust-qt` will be built.
+
+
+Debian Stretch
+--------------
+
+Install libssl1.0-dev instead of libssl-dev
 
 
 Windows
