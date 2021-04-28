@@ -1,11 +1,14 @@
+#include <QApplication>
+
 #include "guiutil.h"
+
 #include "bitcoinaddressvalidator.h"
 #include "walletmodel.h"
 #include "bitcoinunits.h"
+
 #include "util.h"
 #include "init.h"
 
-#include <QString>
 #include <QDateTime>
 #include <QDoubleValidator>
 #include <QFont>
@@ -13,7 +16,6 @@
 #include <QUrl>
 #include <QTextDocument> // For Qt::escape
 #include <QAbstractItemView>
-#include <QApplication>
 #include <QClipboard>
 #include <QFileDialog>
 #include <QDesktopServices>
@@ -81,7 +83,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // BitcoinTrust: check prefix
+    // NovaCoin: check prefix
     if(uri.scheme() != QString("bitcointrust"))
         return false;
 
@@ -456,6 +458,39 @@ void HelpMessageBox::showOrPrint()
         // On other operating systems, print help text to console
         printToConsole();
 #endif
+}
+
+void SetBlackThemeQSS(QApplication& app)
+{
+    app.setStyleSheet("QWidget        { background: rgb(255,255,255); }"
+                      "QFrame         { border: none; }"
+                      "QComboBox      { color: rgb(28,28,28); }"
+                      "QComboBox QAbstractItemView::item { color: rgb(28,28,28); }"
+                      "QPushButton    { background: rgb(255,253,231); color: rgb(28,28,28); }"
+                      "QDoubleSpinBox { background: rgb(255,255,255); color: rgb(28,28,28); border-color: rgb(251,192,45); }"
+                      "QLineEdit      { background: rgb(255,255,255); color: rgb(28,28,28); border-color: rgb(251,192,45); }"
+                      "QTextEdit      { background: rgb(255,255,255); color: rgb(28,28,28); }"
+                      "QPlainTextEdit { background: rgb(255,255,255); color: rgb(28,28,28); }"
+                      "QMenuBar       { background: rgb(41,44,48); color: rgb(28,28,28); }"
+                      "QMenu          { background: rgb(255,255,255); color: rgb(28,28,28); }"
+                      "QMenu::item:selected { background-color: rgb(251,192,45); }"
+                      "QLabel         { color: rgb(28,28,28); }"
+                      "QScrollBar     { color: rgb(255,255,255); }"
+                      "QCheckBox      { color: rgb(28,28,28); }"
+                      "QRadioButton   { color: rgb(28,28,28); }"
+                      "QTabBar::tab   { color: rgb(28,28,28); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
+                      "QTabBar::tab:selected  { background: rgb(255,255,255); }"
+                      "QTabBar::tab:!selected { background: rgb(255,255,255); margin-top: 2px; }"
+                      "QTabWidget::pane { border: 1px solid rgb(78,79,83); }"
+                      "QToolButton    { background: rgb(255,255,255); color: rgb(28,28,28); border: none; border-left-color: rgb(255,245,157); border-left-style: solid; border-left-width: 6px; margin-top: 8px; margin-bottom: 8px; }"
+                      "QToolButton:checked { color: rgb(28,28,28); border: none; border-left-color: rgb(255,235,59); border-left-style: solid; border-left-width: 6px; }"
+                      "QProgressBar   { color: rgb(28,28,28); border-color: rgb(255,245,157); border-width: 3px; border-style: solid; }"
+                      "QProgressBar::chunk { background: rgb(255,245,157); }"
+                      "QTreeView::item { background: rgb(255,255,255); color: rgb(28,28,28); }"
+                      "QTreeView::item:selected { background-color: rgb(59,124,220); }"
+                      "QTableView     { background: rgb(255,253,231); color: rgb(28,28,28); gridline-color: rgb(157,160,165); }"
+                      "QHeaderView::section { background: rgb(255,235,59); color: rgb(28,28,28); }"
+                      "QToolBar       { background: rgb(255,255,255); border: border: rgb(255,245,157); }");
 }
 
 } // namespace GUIUtil
